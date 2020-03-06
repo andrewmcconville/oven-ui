@@ -32,13 +32,13 @@ export default class NumPad extends Vue {
 
     private addDigit(digit: number) {
         if (this.runningTempNumbers.length <= 2) {
-        if (this.$store.state.upperOvenButtonIsPressed) {
-            this.runningTempNumbers += digit;
-            this.$store.commit("SetUpperOvenTemp", this.runningTempNumbers);
-        } else if (this.$store.state.lowerOvenButtonIsPressed) {
-            this.runningTempNumbers += digit;
-            this.$store.commit("SetLowerOvenTemp", this.runningTempNumbers);
-        }
+            if (this.$store.state.upperOvenButtonIsPressed) {
+                this.runningTempNumbers += digit;
+                this.$store.commit("SetUpperOvenTemp", this.runningTempNumbers);
+            } else if (this.$store.state.lowerOvenButtonIsPressed) {
+                this.runningTempNumbers += digit;
+                this.$store.commit("SetLowerOvenTemp", this.runningTempNumbers);
+            }
         }
     }
 
