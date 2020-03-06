@@ -63,14 +63,14 @@ export default class App extends Vue {
                 this.$store.commit('SetConvectButtonIsPressed', false);
                 this.$store.commit('SetBroilButtonIsPressed', false);
 
-            if(this.$store.getters.upperOvenButtonIsPressed) {
-                this.$store.commit('SetUpperOvenButtonIsPressed', false);
-                this.$store.commit('SetUpperOvenTemp', "");
-            }
-            else if(this.$store.getters.lowerOvenButtonIsPressed) {
-                this.$store.commit('SetLowerOvenButtonIsPressed', false)
-                this.$store.commit('SetLowerOvenTemp', "");
-            }
+                if(this.$store.getters.upperOvenButtonIsPressed) {
+                    this.$store.commit('SetUpperOvenButtonIsPressed', false);
+                    this.$store.commit('SetUpperOvenTemp', "");
+                }
+                else if(this.$store.getters.lowerOvenButtonIsPressed) {
+                    this.$store.commit('SetLowerOvenButtonIsPressed', false)
+                    this.$store.commit('SetLowerOvenTemp', "");
+                }
             }
         });
     }
