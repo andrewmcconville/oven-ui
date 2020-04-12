@@ -35,30 +35,30 @@ export default class App extends Vue {
         window.addEventListener("keypress", e => {
             console.log(String.fromCharCode(e.keyCode));
 
-            if(String.fromCharCode(e.keyCode) === 'q') {
+            if(String.fromCharCode(e.keyCode) === 'a') {
                 this.$store.commit('SetLowerOvenButtonIsPressed', false);
                 this.$store.commit('SetUpperOvenButtonIsPressed', true);
             }
-            else if(String.fromCharCode(e.keyCode) === 'a') {
+            else if(String.fromCharCode(e.keyCode) === 'b') {
                 this.$store.commit('SetUpperOvenButtonIsPressed', false);
                 this.$store.commit('SetLowerOvenButtonIsPressed', true);
             }
-            else if(String.fromCharCode(e.keyCode) === 'w') {
+            else if(String.fromCharCode(e.keyCode) === 'c') {
                 this.$store.commit('SetConvectButtonIsPressed', false);
                 this.$store.commit('SetBroilButtonIsPressed', false);
                 this.$store.commit('SetBakeButtonIsPressed', true);
             }
-            else if(String.fromCharCode(e.keyCode) === 's') {
+            else if(String.fromCharCode(e.keyCode) === 'd') {
                 this.$store.commit('SetBakeButtonIsPressed', false);
                 this.$store.commit('SetBroilButtonIsPressed', false);
                 this.$store.commit('SetConvectButtonIsPressed', true);
             }
-            else if(String.fromCharCode(e.keyCode) === 'x') {
+            else if(String.fromCharCode(e.keyCode) === 'e') {
                 this.$store.commit('SetBakeButtonIsPressed', false);
                 this.$store.commit('SetConvectButtonIsPressed', false);
                 this.$store.commit('SetBroilButtonIsPressed', true);
             }
-            else if(String.fromCharCode(e.keyCode) === 'c') {
+            else if(String.fromCharCode(e.keyCode) === 'g') {
                 this.$store.commit('SetBakeButtonIsPressed', false);
                 this.$store.commit('SetConvectButtonIsPressed', false);
                 this.$store.commit('SetBroilButtonIsPressed', false);
