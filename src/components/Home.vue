@@ -1,18 +1,23 @@
 <template>
     <div class="home">
-        <div>upper: {{upperOvenTemp}}</div>
-        <div>lower: {{lowerOvenTemp}}</div>
+        <upper-oven />
+        <lower-oven />
     </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 import { mapGetters } from 'vuex';
 
+import UpperOven from './UpperOven.vue';
+import LowerOven from './LowerOven.vue';
+
 @Component({
+    components: {
+        UpperOven,
+        LowerOven,
+    },
     computed: mapGetters([
-        'upperOvenTemp',
-        'lowerOvenTemp',
     ])
 })
 export default class Home extends Vue {
@@ -22,6 +27,9 @@ export default class Home extends Vue {
 
 <style scoped lang="scss">
 .home {
+    bottom: 0;
+    left: 50%;
+    padding: 20px;
     position: absolute;
     right: 0;
     top: 0;
