@@ -1,0 +1,21 @@
+button {
+    appearance: none;
+    background-color: #444;
+    border: none;
+    border-radius: 0;
+    color: #eee;
+    font-size: 2em;
+    height: 150px;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    width: 150px;
+
+    &:active {
+        background-color: #555;
+        color: #fff;
+        transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

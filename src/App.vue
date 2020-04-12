@@ -78,6 +78,10 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
+@import "./styles/Buttons.scss";
+@import "./styles/Flexbox.scss";
+@import "./styles/SlideAnimation.scss";
+
 #app {
     background-color: #333;
     color: #ddd;
@@ -87,41 +91,5 @@ export default class App extends Vue {
     padding: 32px;
     position: relative;
     width: 1024px;
-}
-
-button {
-    appearance: none;
-    background-color: #444;
-    border: none;
-    border-radius: 0;
-    color: #eee;
-    font-size: 2em;
-    height: 150px;
-    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
-    width: 150px;
-
-    &:active {
-        background-color: #555;
-        color: #fff;
-        transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
-    }
-
-    &:focus {
-        outline: none;
-    }
-}
-
-.slide-in-enter-active, .slide-in-leave-active {
-    transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
-}
-
-.slide-in-enter, .slide-in-leave-to {
-    opacity: 0;
-    transform: translate3D(-16px, 0, 0);
-}
-
-.slide-in-enter-to, .slide-in-leave {
-    opacity: 1;
-    transform: translate3D(0, 0, 0);
 }
 </style>
