@@ -22,7 +22,7 @@ import Oven from './Oven.vue';
     ])
 })
 export default class UpperOven extends Oven {
-    public created() { console.log("Upper Oven") }
+
 }
 </script>
 
