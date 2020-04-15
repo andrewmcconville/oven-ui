@@ -1,7 +1,7 @@
 <template>
     <div class="home">
-        <upper-oven />
-        <lower-oven />
+        <UpperOven />
+        <LowerOven />
     </div>
 </template>
 
