@@ -2,7 +2,7 @@
     <oven :class="{'oven--active': upperOvenButtonIsPressed}"
         :name="'Upper'"
         :temp="upperOvenTemp"
-        :time="''">>
+        :time="''">
     </oven>
 </template>
 
