@@ -1,11 +1,9 @@
 <template>
-    <div>
-        <Oven :class="{'oven--active': lowerOvenButtonIsPressed}"
-            :name="'Lower'"
-            :temp="lowerOvenTemp"
-            :time="''">
-        </Oven>
-    </div>
+    <Oven :class="{'oven--active': lowerOvenButtonIsPressed}"
+        :name="'Lower'"
+        :temp="lowerOvenTemp"
+        :time="''">
+    </Oven>
 </template>
 
 <script lang="ts">
@@ -21,7 +19,7 @@ import Oven from './Oven.vue';
     ])
 })
 export default class LowerOven extends Oven {
-    
+    public created() { console.log("Lower Oven") }
 }
 </script>
 
