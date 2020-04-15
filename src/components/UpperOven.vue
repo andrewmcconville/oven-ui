@@ -13,6 +13,9 @@ import { mapGetters } from 'vuex';
 import Oven from './Oven.vue';
 
 @Component({
+    components: {
+        Oven
+    },
     computed: mapGetters([
         'upperOvenButtonIsPressed',
         'upperOvenTemp',
