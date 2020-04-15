@@ -1,9 +1,11 @@
 <template>
-    <Oven :class="{'oven--active': upperOvenButtonIsPressed}"
-        :name="'Upper'"
-        :temp="upperOvenTemp"
-        :time="''">
-    </Oven>
+    <div>
+        <Oven :class="{'oven--active': upperOvenButtonIsPressed}"
+            :name="'Upper'"
+            :temp="upperOvenTemp"
+            :time="''">
+        </Oven>
+    </div>
 </template>
 
 <script lang="ts">
