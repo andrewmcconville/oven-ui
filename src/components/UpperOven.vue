@@ -1,5 +1,5 @@
 <template>
-    <Oven :class="{'oven--active': upperOvenButtonIsPressed}"
+    <Oven
         :name="'Upper'"
         :temp="upperOvenTemp"
         :time="''">
