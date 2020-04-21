@@ -1,5 +1,6 @@
 <template>
     <div class="home">
+        <Clock class="clock" />
         <UpperOven />
         <LowerOven />
     </div>
@@ -9,11 +10,13 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { mapGetters } from 'vuex';
 
+import Clock from './Clock.vue';
 import UpperOven from './UpperOven.vue';
 import LowerOven from './LowerOven.vue';
 
 @Component({
     components: {
+        Clock,
         UpperOven,
         LowerOven,
     },
@@ -33,5 +36,9 @@ export default class Home extends Vue {
     position: absolute;
     right: 0;
     top: 0;
+}
+
+.clock {
+    margin-bottom: 24px;;
 }
 </style>
