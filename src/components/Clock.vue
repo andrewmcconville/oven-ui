@@ -71,6 +71,6 @@ export default class Clock extends Vue {
     font-size: 32px;
     text-transform: uppercase;
     line-height: 1;
-    margin-top: 12px;
+    margin-top: 16px;
 }
 </style>

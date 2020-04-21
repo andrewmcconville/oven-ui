@@ -15,10 +15,10 @@
             <button class="num-pad__button" v-on:click="addDigit(2)">2</button>
             <button class="num-pad__button" v-on:click="addDigit(3)">3</button>
         </div>
-        <div>
-            <button class="num-pad__button" v-on:click="removeDigit">Back</button>
+        <div class="flex flex-between-center">
+            <button class="num-pad__button num-pad__button--text" v-on:click="removeDigit">Back</button>
             <button class="num-pad__button" v-on:click="addDigit(0)">0</button>
-            <button class="num-pad__button" v-on:click="setTemp">Start</button>
+            <button class="num-pad__button num-pad__button--text" v-on:click="setTemp">Start</button>
         </div>
     </div>
 </template>
@@ -79,6 +79,24 @@ export default class NumPad extends Vue {
 }
 
 .num-pad__button {
+    background-color: #444;
+    color: #eee;
+    font-size: 64px;
+    font-weight: 200;;
+    height: 150px;
+    line-height: 1;
     margin: 4px;
+    transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+    width: 150px;
+
+    &:active {
+        background-color: #555;
+        color: #fff;
+        transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
+    }
+}
+
+.num-pad__button--text {
+    font-size: 48px;
 }
 </style>

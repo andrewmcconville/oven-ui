@@ -6,8 +6,10 @@
             </label>
             <div class="flex flex-between-center">
                 <div>
-                    <div class="oven__temp">
-                        {{temp || '0'}}
+                    <div class="flex flex-start-start">
+                        <span class="oven__temp">{{temp || '0'}}</span>
+                        <span class="oven__degree">°</span>
+                        <span class="oven__unit">F</span>
                     </div>
                     <label class="oven__label">Temp</label>
                 </div>
@@ -51,6 +53,9 @@ export default class Oven extends Vue {
 }
 
 .oven__label {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .25px;
     text-transform: uppercase;
 }
 
@@ -60,13 +65,30 @@ export default class Oven extends Vue {
 }
 
 .oven__temp {
-    font-size: 72px;
-    font-weight: bold;
+    font-size: 80px;
+    font-weight: 200;
     line-height: 1;
+    margin-left: -3px;
+}
+
+.oven__degree {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1;
+    margin-left: -2px;
+    margin-top: 7px;
+}
+
+.oven__unit {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
+    margin-top: 9px;
 }
 
 .oven__timer {
-    font-size: 72px;
+    font-size: 80px;
+    font-weight: 200;
     line-height: 1;
 }
 
