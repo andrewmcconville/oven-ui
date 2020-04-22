@@ -83,11 +83,11 @@ export default class NumPad extends Vue {
     color: #eee;
     font-size: 64px;
     font-weight: 200;;
-    height: 150px;
+    height: 134px;
     line-height: 1;
     margin: 4px;
     transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
-    width: 150px;
+    width: 140px;
 
     &:active {
         background-color: #555;
@@ -97,6 +97,6 @@ export default class NumPad extends Vue {
 }
 
 .num-pad__button--text {
-    font-size: 48px;
+    font-size: 44px;
 }
 </style>
