@@ -37,13 +37,14 @@ export default class Oven extends Vue {
 
 <style scoped lang="scss">
 .oven {
-    border-left: 6px solid transparent;
+    //border-left: 6px solid transparent;
     //background-color: #444;
     margin-top: 48px;
     padding: 2px;
 }
 
 .oven--active {
+    background-color: #444;
     border-color: #888;
 }
 
