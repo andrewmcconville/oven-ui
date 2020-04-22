@@ -52,7 +52,7 @@ export default class Clock extends Vue {
     }
 
     private checkAmPm(hours: number): string {
-        if (hours > 12) {
+        if (hours >= 12) {
             return 'pm'
         } else {
             return 'am'
