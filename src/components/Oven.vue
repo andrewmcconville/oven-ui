@@ -39,8 +39,8 @@ export default class Oven extends Vue {
 .oven {
     //border-left: 6px solid transparent;
     //background-color: #444;
-    margin-top: 48px;
-    padding: 2px;
+    margin-top: 40px;
+    //padding: 2px;
 }
 
 .oven--active {

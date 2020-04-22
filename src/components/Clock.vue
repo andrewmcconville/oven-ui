@@ -63,11 +63,11 @@ export default class Clock extends Vue {
 
 <style scoped lang="scss">
 .clock {
-    margin-bottom: 8px;
+    //margin-bottom: 8px;
 }
 
 .clock__time {
-    font-size: 144px;
+    font-size: 128px;
     line-height: 1;
 }
 
