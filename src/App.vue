@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <Debug />
+        <!-- <Debug /> -->
         <Helper />
         <transition name="slide-in">
             <NumPad v-if="(upperOvenButtonIsPressed || lowerOvenButtonIsPressed) && (bakeButtonIsPressed || convectButtonIsPressed || broilButtonIsPressed)" />
