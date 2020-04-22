@@ -1,10 +1,11 @@
 <template>
     <div id="app">
         <Debug />
-        <Home />
+        <Helper />
         <transition name="slide-in">
             <NumPad v-if="(upperOvenButtonIsPressed || lowerOvenButtonIsPressed) && (bakeButtonIsPressed || convectButtonIsPressed || broilButtonIsPressed)" />
         </transition>
+        <Home />
     </div>
 </template>
 
@@ -13,12 +14,14 @@ import { Component, Vue } from 'vue-property-decorator';
 import { mapGetters } from 'vuex';
 
 import Debug from './components/Debug.vue';
+import Helper from './components/Helper.vue';
 import Home from './components/Home.vue';
 import NumPad from './components/NumPad.vue';
 
 @Component({
     components: {
         Debug,
+        Helper,
         Home,
         NumPad,
     },
@@ -78,8 +81,8 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-@import "./styles/Buttons.scss";
 @import "./styles/Flexbox.scss";
+@import "./styles/Reset.scss";
 @import "./styles/SlideAnimation.scss";
 
 #app {

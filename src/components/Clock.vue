@@ -69,6 +69,7 @@ export default class Clock extends Vue {
 
 .clock__ampm {
     font-size: 32px;
+    font-weight: 200;
     text-transform: uppercase;
     line-height: 1;
     margin-top: 16px;

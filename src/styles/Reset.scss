@@ -1,5 +1,6 @@
 button {
     appearance: none;
+    background-color: transparent;
     border: none;
     border-radius: 0;
     font-family: Oswald, Helvetica, Arial, sans-serif;
@@ -7,4 +8,8 @@ button {
     &:focus {
         outline: none;
     }
+}
+
+p {
+    margin: 0;
 }

@@ -1,24 +1,24 @@
 <template>
     <div class="num-pad">
         <div>
-            <button class="num-pad__button" v-on:click="addDigit(7)">7</button>
-            <button class="num-pad__button" v-on:click="addDigit(8)">8</button>
-            <button class="num-pad__button" v-on:click="addDigit(9)">9</button>
+            <button class="num-pad__button" @click="addDigit(7)">7</button>
+            <button class="num-pad__button" @click="addDigit(8)">8</button>
+            <button class="num-pad__button" @click="addDigit(9)">9</button>
         </div>
         <div>
-            <button class="num-pad__button" v-on:click="addDigit(4)">4</button>
-            <button class="num-pad__button" v-on:click="addDigit(5)">5</button>
-            <button class="num-pad__button" v-on:click="addDigit(6)">6</button>
+            <button class="num-pad__button" @click="addDigit(4)">4</button>
+            <button class="num-pad__button" @click="addDigit(5)">5</button>
+            <button class="num-pad__button" @click="addDigit(6)">6</button>
         </div>
         <div>
-            <button class="num-pad__button" v-on:click="addDigit(1)">1</button>
-            <button class="num-pad__button" v-on:click="addDigit(2)">2</button>
-            <button class="num-pad__button" v-on:click="addDigit(3)">3</button>
+            <button class="num-pad__button" @click="addDigit(1)">1</button>
+            <button class="num-pad__button" @click="addDigit(2)">2</button>
+            <button class="num-pad__button" @click="addDigit(3)">3</button>
         </div>
         <div class="flex flex-between-center">
-            <button class="num-pad__button num-pad__button--text" v-on:click="removeDigit">Back</button>
-            <button class="num-pad__button" v-on:click="addDigit(0)">0</button>
-            <button class="num-pad__button num-pad__button--text" v-on:click="setTemp">Start</button>
+            <button class="num-pad__button num-pad__button--text" @click="removeDigit">Back</button>
+            <button class="num-pad__button" @click="addDigit(0)">0</button>
+            <button class="num-pad__button num-pad__button--text" @click="setTemp">Start</button>
         </div>
     </div>
 </template>

@@ -1,9 +1,11 @@
 <template>
-    <Oven :class="{'oven--active': upperOvenButtonIsPressed}"
-        :name="'Upper'"
-        :temp="upperOvenTemp"
-        :time="''">
-    </Oven>
+    <div @click="upperActive">
+        <Oven :class="{'oven--active': upperOvenButtonIsPressed}"
+            :name="'Upper'"
+            :temp="upperOvenTemp"
+            :time="''">
+        </Oven>
+    </div>
 </template>
 
 <script lang="ts">
@@ -22,7 +24,10 @@ import Oven from './Oven.vue';
     ])
 })
 export default class UpperOven extends Oven {
-
+    private upperActive() {
+        this.$store.commit('SetLowerOvenButtonIsPressed', false);
+        this.$store.commit('SetUpperOvenButtonIsPressed', true);
+    }
 }
 </script>
 

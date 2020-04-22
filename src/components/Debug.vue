@@ -18,16 +18,15 @@ import { Component, Vue } from 'vue-property-decorator';
 import { mapGetters } from 'vuex';
 
 @Component({
-    computed: 
-        mapGetters([
-            'upperOvenButtonIsPressed',
-            'lowerOvenButtonIsPressed',
-            'bakeButtonIsPressed',
-            'convectButtonIsPressed',
-            'broilButtonIsPressed',
-            'upperOvenTemp',
-            'lowerOvenTemp',
-        ])
+    computed: mapGetters([
+        'upperOvenButtonIsPressed',
+        'lowerOvenButtonIsPressed',
+        'bakeButtonIsPressed',
+        'convectButtonIsPressed',
+        'broilButtonIsPressed',
+        'upperOvenTemp',
+        'lowerOvenTemp',
+    ])
 })
 export default class Debug extends Vue {
     
