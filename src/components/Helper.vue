@@ -1,36 +1,36 @@
 <template>
     <div class="helper">
-        <div v-if="
-            !(upperOvenTemp || lowerOvenTemp)
-            &&
-            !(upperOvenButtonIsPressed || lowerOvenButtonIsPressed)
-        ">
-            <p class="helper__text">Which oven <br /> would you like <br /> to use?</p>
-            <button class="helper__button" @click="setUpper">Upper Oven</button>
-            <button class="helper__button" @click="setLower">Lower Oven</button>
-        </div>
+        <transition name="slide-in">
+            <section class="helper__section" v-if="
+                !(upperOvenButtonIsPressed || lowerOvenButtonIsPressed)
+            ">
+                <p class="helper__text">Which oven <br /> would you like <br /> to use?</p>
+                <button class="helper__button" @click="setUpper">Upper Oven</button>
+                <button class="helper__button" @click="setLower">Lower Oven</button>
+            </section>
+        </transition>
 
-        <div v-else-if="
-            !(upperOvenTemp || lowerOvenTemp)
-            &&
-            (upperOvenButtonIsPressed || lowerOvenButtonIsPressed)
-            &&
-            !(bakeButtonIsPressed || convectButtonIsPressed || broilButtonIsPressed)
-        ">
-            <p class="helper__text">How would you <br /> like to cook?</p>
-            <button class="helper__button" @click="setBake">Bake</button>
-            <button class="helper__button" @click="setConvect">Convect</button>
-            <button class="helper__button" @click="setBroil">Broil</button>
-            <button class="helper__button">Options</button>
-        </div>
+        <transition name="slide-in">
+            <section class="helper__section" v-if="
+                (upperOvenButtonIsPressed || lowerOvenButtonIsPressed)
+                &&
+                !(bakeButtonIsPressed || convectButtonIsPressed || broilButtonIsPressed)
+            ">
+                <p class="helper__text">How would you <br /> like to cook?</p>
+                <button class="helper__button" @click="setBake">Bake</button>
+                <button class="helper__button" @click="setConvect">Convect</button>
+                <button class="helper__button" @click="setBroil">Broil</button>
+                <button class="helper__button">Options</button>
+            </section>
+        </transition>
 
-        <div v-else-if="
+        <!-- <section class="helper__section" v-if="
             upperOvenTemp || lowerOvenTemp
         ">
-            <p class="helper__text">Would you like <br /> to set a timer?</p>
+            <p>Would you like <br /> to set a timer?</p>
             <button class="helper__button">Yes</button>
             <button class="helper__button">No</button>
-        </div>
+        </section> -->
     </div>
 </template>
 
@@ -82,10 +82,14 @@ export default class Helper extends Vue {
     justify-content: start;
     left: 0;
     line-height: 1.1;
-    padding: 20px 60px 20px 20px;
+    padding: 32px 60px 32px 32px;
     position: absolute;
     right: 50%;
     top: 0;
+}
+
+.helper__section {
+    position: absolute;
 }
 
 .helper__text {

@@ -37,9 +37,9 @@ export default class Oven extends Vue {
 
 <style scoped lang="scss">
 .oven {
-    border: 4px solid transparent;
-    background-color: #444;
-    margin-bottom: 20px;
+    border-left: 6px solid transparent;
+    //background-color: #444;
+    margin-top: 48px;
     padding: 2px;
 }
 
@@ -60,8 +60,9 @@ export default class Oven extends Vue {
 }
 
 .oven__name {
+    border-bottom: 2px solid #888;
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 .oven__temp {

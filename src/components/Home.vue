@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <Clock class="clock" />
+        <Clock />
         <UpperOven />
         <LowerOven />
     </div>
@@ -31,14 +31,13 @@ export default class Home extends Vue {
 <style scoped lang="scss">
 .home {
     bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     left: 50%;
-    padding: 20px;
+    padding: 32px;
     position: absolute;
     right: 0;
     top: 0;
-}
-
-.clock {
-    margin-bottom: 24px;;
 }
 </style>

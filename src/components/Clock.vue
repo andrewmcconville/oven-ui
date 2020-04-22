@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-center-start">
+    <div class="clock flex flex-center-start">
         <span class="clock__time">{{time}}</span>
         <span class="clock__ampm">{{amPm}}</span>
     </div>
@@ -62,6 +62,10 @@ export default class Clock extends Vue {
 </script>
 
 <style scoped lang="scss">
+.clock {
+    margin-bottom: 8px;
+}
+
 .clock__time {
     font-size: 144px;
     line-height: 1;
