@@ -79,8 +79,6 @@ export default class NumPad extends Vue {
 }
 
 .num-pad__button {
-    background-color: #444;
-    color: #eee;
     font-size: 64px;
     font-weight: 200;;
     height: 134px;
@@ -90,8 +88,6 @@ export default class NumPad extends Vue {
     width: 140px;
 
     &:active {
-        background-color: #555;
-        color: #fff;
         transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
     }
 }
@@ -99,4 +95,23 @@ export default class NumPad extends Vue {
 .num-pad__button--text {
     font-size: 44px;
 }
+
+@mixin theme($theme-name, $buttonBackgroundColor, $buttonColor) {
+   .#{$theme-name} {
+       .num-pad__button {
+            background-color: $buttonBackgroundColor;
+            color: $buttonColor;
+            transition: background-color ease-in-out 1000ms, color ease-in-out 1000ms;
+
+            &:active {
+                background-color: lighten($buttonBackgroundColor, 10%);
+                color: lighten($buttonColor, 10%);
+                transition: background-color ease-in-out 1000ms, color ease-in-out 1000ms;
+            }
+       }
+   }
+}
+
+@include theme(light, #eee, #444);
+@include theme(dark, #444, #eee);
 </style>

@@ -104,5 +104,26 @@ export default class Helper extends Vue {
     font-weight: 200;
     margin-bottom: 8px;
     padding: 8px 16px;
+
+    &:active {
+        transition: background-color 20ms ease-in-out, color 20ms ease-in-out;
+    }
 }
+
+@mixin theme($theme-name, $buttonBackgroundColor, $buttonColor) {
+   .#{$theme-name} {
+       .helper__button {
+            background-color: $buttonBackgroundColor;
+            color: $buttonColor;
+
+            &:active {
+                background-color: lighten($buttonBackgroundColor, 10%);
+                color: lighten($buttonColor, 10%);
+            }
+       }
+   }
+}
+
+@include theme(light, #eee, #444);
+@include theme(dark, #444, #eee);
 </style>

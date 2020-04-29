@@ -44,8 +44,7 @@ export default class Oven extends Vue {
 }
 
 .oven--active {
-    background-color: #444;
-    border-color: #888;
+    //border-color: #888;
 }
 
 .oven__border {
@@ -97,4 +96,16 @@ export default class Oven extends Vue {
 .oven__timer--inactive {
     opacity: .15;
 }
+
+@mixin theme($theme-name, $ovenBackgroundColor, $buttonColor) {
+   .#{$theme-name} {
+        .oven--active {
+            background-color: $ovenBackgroundColor;
+            transition: background-color ease-in-out 1000ms;
+        }
+   }
+}
+
+@include theme(light, #eee, #444);
+@include theme(dark, #444, #eee);
 </style>

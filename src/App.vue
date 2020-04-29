@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" :class="theme">
         <!-- <Debug /> -->
         <Helper />
         <transition name="slide-in">
@@ -26,6 +26,7 @@ import NumPad from './components/NumPad.vue';
         NumPad,
     },
     computed: mapGetters([
+        'theme',
         'upperOvenButtonIsPressed',
         'lowerOvenButtonIsPressed',
         'bakeButtonIsPressed',
@@ -75,6 +76,12 @@ export default class App extends Vue {
                     this.$store.commit('SetLowerOvenTemp', "");
                 }
             }
+            else if(String.fromCharCode(e.keyCode) === '0') {
+                this.$store.commit('SetTheme', 'dark');
+            }
+            else if(String.fromCharCode(e.keyCode) === '9') {
+                this.$store.commit('SetTheme', 'light');
+            }
         });
     }
 }
@@ -86,12 +93,23 @@ export default class App extends Vue {
 @import "./styles/SlideAnimation.scss";
 
 #app {
-    background-color: #333;
-    color: #ddd;
     height: 600px;
     overflow: hidden;
     padding: 32px;
     position: relative;
     width: 1024px;
 }
+
+@mixin theme($theme-name, $appBackgroundColor, $appColor) {
+   .#{$theme-name} {
+       &#app {
+            background-color: $appBackgroundColor;
+            color: $appColor;
+            transition: background-color ease-in-out 1000ms, color ease-in-out 1000ms;
+       }
+   }
+}
+
+@include theme(light, #ddd, #444);
+@include theme(dark, #333, #ddd);
 </style>

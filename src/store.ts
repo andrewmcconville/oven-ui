@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
+        theme: 'dark',
         upperOvenButtonIsPressed: false,
         lowerOvenButtonIsPressed: false,
         bakeButtonIsPressed: false,
@@ -14,6 +15,9 @@ const store = new Vuex.Store({
         lowerOvenTemp: "",
     },
     mutations: {
+        SetTheme(state: IOvenStore, data: string) {
+            state.theme = data;
+        },
         SetUpperOvenButtonIsPressed(state: IOvenStore, data: boolean) {
             state.upperOvenButtonIsPressed = data;
         },
@@ -37,6 +41,9 @@ const store = new Vuex.Store({
         },
     },
     getters: {
+        theme: state => {
+            return state.theme
+        },
         upperOvenButtonIsPressed: state => {
             return state.upperOvenButtonIsPressed
         },
@@ -62,6 +69,7 @@ const store = new Vuex.Store({
 })
 
 export interface IOvenStore {
+    theme: string,
     upperOvenButtonIsPressed: boolean,
     lowerOvenButtonIsPressed: boolean,
     bakeButtonIsPressed: boolean,
