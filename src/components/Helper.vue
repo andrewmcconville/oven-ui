@@ -115,6 +115,7 @@ export default class Helper extends Vue {
        .helper__button {
             background-color: $buttonBackgroundColor;
             color: $buttonColor;
+            transition: background-color ease-in-out 1000ms, color ease-in-out 1000ms;
 
             &:active {
                 background-color: lighten($buttonBackgroundColor, 10%);
