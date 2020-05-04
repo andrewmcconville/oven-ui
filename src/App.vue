@@ -76,11 +76,12 @@ export default class App extends Vue {
                     this.$store.commit('SetLowerOvenTemp', "");
                 }
             }
-            else if(String.fromCharCode(e.keyCode) === '0') {
-                this.$store.commit('SetTheme', 'dark');
-            }
-            else if(String.fromCharCode(e.keyCode) === '9') {
-                this.$store.commit('SetTheme', 'light');
+            else if(String.fromCharCode(e.keyCode) === 'l') {
+                if (this.$store.getters.theme == 'light') {
+                    this.$store.commit('SetTheme', 'dark');
+                } else {
+                    this.$store.commit('SetTheme', 'light');
+                }
             }
         });
     }
